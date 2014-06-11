@@ -1,0 +1,30 @@
+diff -urN gr-lida-0.11.0/3rdparty/osdab-zip/zip_p.h gr-lida-0.11.0-patched/3rdparty/osdab-zip/zip_p.h
+--- gr-lida-0.11.0/3rdparty/osdab-zip/zip_p.h	2013-08-19 01:37:11.000000000 +1100
++++ gr-lida-0.11.0-patched/3rdparty/osdab-zip/zip_p.h	2014-06-11 14:27:00.575313878 +1100
+@@ -65,8 +65,12 @@
+     Q_OBJECT
+ 
+ public:
+-    // uLongf from zconf.h
+-    typedef uLongf crc_t;
++    // from zconf.h
++#ifdef Z_U4
++    typedef Z_U4 crc_t;
++#else
++    typedef unsigned long crc_t;
++#endif
+ 
+ 	ZipPrivate();
+ 	virtual ~ZipPrivate();
+diff -urN gr-lida-0.11.0/gr-lida.pro gr-lida-0.11.0-patched/gr-lida.pro
+--- gr-lida-0.11.0/gr-lida.pro	2013-08-19 01:37:11.000000000 +1100
++++ gr-lida-0.11.0-patched/gr-lida.pro	2014-06-11 14:27:34.943881254 +1100
+@@ -22,7 +22,7 @@
+ 
+ # ###### Compiler, tools and options
+ # To use external zlib add: use_zlib
+-CONFIG += qt warn_on thread release
++CONFIG += qt warn_on thread release use_zlib
+ 
+ # Examples:
+ #CONFIG += qt warn_on thread release use_zlib
