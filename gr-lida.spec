@@ -10,6 +10,7 @@ Patch0:		gr-lida-0.11.0-zlib.patch
 BuildRequires:	librsvg
 BuildRequires:	qt4-devel
 BuildRequires:	pkgconfig(phonon)
+BuildRequires:	pkgconfig(poppler-qt4)
 BuildRequires:	pkgconfig(zlib)
 
 %description
