@@ -1,7 +1,7 @@
 Summary:	Frontend for DOSBox, ScummVM and VDMSound
 Name:		gr-lida
 Version:	0.11.0
-Release:	1
+Release:	2
 License:	GPLv2+
 Group:		Emulators
 Url:		http://www.gr-lida.org/
