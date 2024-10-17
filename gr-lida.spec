@@ -4,7 +4,7 @@ Version:	0.11.0
 Release:	2
 License:	GPLv2+
 Group:		Emulators
-Url:		http://www.gr-lida.org/
+Url:		https://www.gr-lida.org/
 Source0:	https://github.com/Monthy/gr-lida/archive/%{name}-%{version}.tar.gz
 Patch0:		gr-lida-0.11.0-zlib.patch
 BuildRequires:	librsvg
