@@ -7,6 +7,7 @@ Group:		Emulators
 Url:		https://www.gr-lida.org/
 Source0:	https://github.com/Monthy/gr-lida/archive/%{name}-%{version}.tar.gz
 Patch0:		gr-lida-0.11.0-zlib.patch
+BuildRequires:	make
 BuildRequires:	librsvg
 BuildRequires:	qt4-devel
 BuildRequires:	pkgconfig(phonon)
